@@ -33,8 +33,6 @@ public final class Airports {
 	}
 	
 	public boolean existsAirport(int id) {
-		//System.out.println(id);
-		//System.out.println(airports.containsKey(new Integer(id)));
 		return airports.containsKey(id);
 	}
 	

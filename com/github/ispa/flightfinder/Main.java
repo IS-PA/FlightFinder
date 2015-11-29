@@ -1,39 +1,28 @@
 package com.github.ispa.flightfinder;
 
-import com.github.ispa.flightfinder.logic.Airport;
 import com.github.ispa.flightfinder.logic.Airports;
-import com.github.ispa.flightfinder.logic.Flight;
-import com.github.ispa.flightfinder.logic.FlightDeserializer;
 import com.github.ispa.flightfinder.logic.Flights;
 import com.github.ispa.flightfinder.utils.FlightfinderApi;
-import com.github.ispa.flightfinder.utils.HttpRequests;
-import com.github.ispa.flightfinder.utils.randomUtils;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 public class Main {
 
 	public static void main(String[] args) {
-		FlightfinderApi api = FlightfinderApi.getInstance();
-		Airports airports = Airports.getInstance();
-		Flights flights = Flights.getInstance();
-		Gson prettyJsonPrinter = new GsonBuilder().setPrettyPrinting().create();
+		FlightfinderApi.getInstance();
+		Airports.getInstance();
+		Flights.getInstance();
 		
-		
-	    System.out.println(flights.getFlight(0).getOrigin().getDisplayname());
+	    System.out.println("Origin of flight 0: " + Flights.getInstance().getFlight(0).getOrigin().getDisplayname());
 		//tests();
 	}
 	
 	public static void tests() {
 		
+		/*
 		Gson prettyJsonPrinter = new GsonBuilder().setPrettyPrinting().create();
 		Gson gson = new Gson();
 		JsonObject response, data;
 		FlightfinderApi api = FlightfinderApi.getInstance();
-		
+		*/
 		
 		/*
 		System.out.println("\n" + randomUtils.buildStringFromChar('-', 30));

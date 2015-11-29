@@ -22,6 +22,7 @@ public class randomUtils {
 		}
 		return jo;
 	}
+	
 	public static JsonObject jOb() {
 		return jOb("{}");
 	}

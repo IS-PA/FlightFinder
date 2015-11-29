@@ -16,7 +16,13 @@ public class HttpRequests {
 	public static String excutePost(String targetURL, String getparameters) {
 		return excutePost(targetURL, getparameters, "");
 	}
-	
+	/**
+	 * From: http://stackoverflow.com/a/1359700
+	 * @param targetURL
+	 * @param getparameters
+	 * @param postParameters
+	 * @return
+	 */
 	public static String excutePost(String targetURL, String getparameters, String postParameters) {
 		if (!(getparameters == null || getparameters.isEmpty())) targetURL = targetURL + "?" +getparameters;
 		  HttpURLConnection connection = null;
@@ -53,7 +59,7 @@ public class HttpRequests {
 		    rd.close();
 		    return response.toString();
 		  } catch (Exception e) {
-		    //e.printStackTrace();
+		    e.printStackTrace();
 		    return null;
 		  } finally {
 		    if(connection != null) {

@@ -8,7 +8,6 @@ import com.google.gson.JsonParser;
 
 public class FlightfinderApi {
 	private static FlightfinderApi instance = null;
-	//HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/tests");
 	private static final String baseUrlApi = "http://services.devpgsv.com/flightfinder/api/";
 	
 	private String subjectType;
@@ -63,8 +62,6 @@ public class FlightfinderApi {
 		return get(randomUtils.jOb(getParams));
 	}
 	
-	
-	
 	private String buildUrl() {
 		StringBuilder url = new StringBuilder(baseUrlApi);
 		if (this.subjectType != null) {
@@ -88,7 +85,6 @@ public class FlightfinderApi {
 				paramsS.append(randomUtils.urlEncode(entry.getKey()) + "=" + randomUtils.urlEncode(entry.getValue().toString()) + "&");
 			}
 		}
-		//System.out.println(paramsS);
 		return paramsS.toString();
 	}
 }
