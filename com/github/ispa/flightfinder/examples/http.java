@@ -18,34 +18,34 @@ public class http {
 		String t;
 		
 		
-		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/tests");
+		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/api/tests");
 		System.out.println(gson.toJson(jp.parse(t)) + "\n" + randomUtils.buildStringFromChar('-', 30));
 		
-		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/tests", "a=b&c=d");
+		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/api/tests", "a=b&c=d");
 		System.out.println(gson.toJson(jp.parse(t)) + "\n" + randomUtils.buildStringFromChar('-', 30));
 		
-		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/tests", "a=b&c=d","e=f");
+		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/api/tests", "a=b&c=d","e=f");
 		System.out.println(gson.toJson(jp.parse(t)) + "\n" + randomUtils.buildStringFromChar('-', 30));
 		
-		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/tests", "","e=f");
+		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/api/tests", "","e=f");
 		System.out.println(gson.toJson(jp.parse(t)) + "\n" + randomUtils.buildStringFromChar('-', 30));
 		
-		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/tests", "", "a=b&c=d");
+		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/api/tests", "", "a=b&c=d");
 		System.out.println(gson.toJson(jp.parse(t)) + "\n" + randomUtils.buildStringFromChar('-', 30));
 		
-		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/tests/testId1");
+		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/api/tests/testId1");
 		System.out.println(gson.toJson(jp.parse(t)) + "\n" + randomUtils.buildStringFromChar('-', 30));
 		
-		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/tests/testId1/option2");
+		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/api/tests/testId1/option2");
 		System.out.println(gson.toJson(jp.parse(t)) + "\n" + randomUtils.buildStringFromChar('-', 30));
 		
-		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/tests/testId1/option3", "", "action=update&newValue=whatever"); // Just an example. Nothing happens.
+		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/api/tests/testId1/option3", "", "action=update&newValue=whatever"); // Just an example. Nothing happens.
 		System.out.println(gson.toJson(jp.parse(t)) + "\n" + randomUtils.buildStringFromChar('-', 30));
 		
-		//t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/flight/1/origin", "", "action=update&newValue=2"); // Just an example. Nothing happens.
+		//t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/api/flight/1/origin", "", "action=update&newValue=2"); // Just an example. Nothing happens.
 		//System.out.println(gson.toJson(jp.parse(t)) + "\n" + randomUtils.buildStringFromChar('-', 30));
 		
-		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/srthrhe"); // This url doesn't exist
+		t = HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/api/srthrhe"); // This url doesn't exist
 		if (! (t == null)) {
 			System.out.println(gson.toJson(jp.parse(t)) + "\n" + randomUtils.buildStringFromChar('-', 30));
 		} else {

@@ -1,11 +1,7 @@
 package com.github.ispa.flightfinder.utils;
 
 
-import java.net.URLEncoder;
 import java.util.Map;
-
-import com.github.ispa.flightfinder.logic.Airports;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -13,7 +9,7 @@ import com.google.gson.JsonParser;
 public class FlightfinderApi {
 	private static FlightfinderApi instance = null;
 	//HttpRequests.excutePost("http://services.devpgsv.com/flightfinder/tests");
-	private static final String baseUrlApi = "http://services.devpgsv.com/flightfinder/";
+	private static final String baseUrlApi = "http://services.devpgsv.com/flightfinder/api/";
 	
 	private String subjectType;
 	private Integer subject;
