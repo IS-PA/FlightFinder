@@ -87,4 +87,29 @@ public class FlightfinderApi {
 		}
 		return paramsS.toString();
 	}
+
+	public JsonObject add(JsonObject object) {
+		String url = buildUrl() + "add/";
+		JsonObject postParams = new JsonObject();
+		postParams.add("object", object);
+		String response = HttpRequests.excutePost(url, "", buildParams(postParams));
+		if (response == null) {
+			return null;
+		}
+		reset();
+		return new JsonParser().parse(response).getAsJsonObject();
+	}
+
+	public JsonObject delete(int i) {
+		String url = buildUrl() + "delete/";
+		JsonObject postParams = new JsonObject();
+		postParams.addProperty("object", i);
+		String response = HttpRequests.excutePost(url, "", buildParams(postParams));
+		if (response == null) {
+			return null;
+		}
+		reset();
+		return new JsonParser().parse(response).getAsJsonObject();
+	}
+	
 }
