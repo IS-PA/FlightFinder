@@ -8,7 +8,7 @@ import com.google.gson.JsonParser;
 
 public class FlightfinderApi {
 	private static FlightfinderApi instance = null;
-	private static final String baseUrlApi = "http://services.devpgsv.com/flightfinder/api/";
+	private static final String baseUrlApi = "https://services.devpgsv.com/flightfinder/api/";
 	
 	private String subjectType;
 	private Integer subject;
