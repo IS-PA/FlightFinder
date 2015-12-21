@@ -16,7 +16,7 @@ public class FlightDeserializer implements JsonDeserializer<Flight>{
 					json.getAsJsonObject().get("id").getAsInt(), 
 					airports.getAirport(json.getAsJsonObject().get("origin").getAsInt()),
 					airports.getAirport(json.getAsJsonObject().get("destination").getAsInt()),
-					json.getAsJsonObject().get("departure_timestamp").getAsInt()
+					json.getAsJsonObject().get("departure_timestamp").getAsLong()
 					);
 		} else {
 			return new Flight(

@@ -9,10 +9,10 @@ public class Flight {
 	private int id;
 	private Airport origin;
 	private Airport destination;
-	private int departure_timestamp;
+	private long departure_timestamp;
 	private JsonObject seats;
 	
-	public Flight(int id, Airport origin, Airport destination, int departure_timestamp) {
+	public Flight(int id, Airport origin, Airport destination, long departure_timestamp) {
 		this.id = id;
 		this.origin = origin;
 		this.destination = destination;
@@ -31,7 +31,7 @@ public class Flight {
 		return this.destination;
 	}
 	
-	public int getDepartureTimestamp() {
+	public long getDepartureTimestamp() {
 		return this.departure_timestamp;
 	}
 
